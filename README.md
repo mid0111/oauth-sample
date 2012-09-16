@@ -16,42 +16,42 @@ So, create configuration file.
 
 + make directory
 
-    $ mkdir config
+        $ mkdir config
 
 + Edit the default configuration file (.js, .json, or .yaml):
 
-    $ touch config/default.json
-    $ vi config/default.json
+        $ touch config/default.json
+        $ vi config/default.json
     
-    {
-      "server" : {
-        "host" : "localhost", // server host
-        "port" : 9002,        // server port
-        "database" : {
-          "host" : "localhost",           // mongoose server host
-          "dbname" : "everyAuth-sample"   // mongoose database name
+        {
+          "server" : {
+            "host" : "localhost", // server host
+            "port" : 9002,        // server port
+            "database" : {
+              "host" : "localhost",           // mongoose server host
+              "dbname" : "everyAuth-sample"   // mongoose database name
+            }
+          },
+          "everyauth" : {
+            "facebook" : {
+              "appId" : "xxx",
+              "appSecret" : "xxx"
+            },
+            "github" : {
+              "appId" : "xxx",
+              "appSecret" : "xxx"
+            },
+            "twitter" : {
+              "consumerKey" : "xxx",
+              "consumerSecret" : "xxx"
+            }
+          }
         }
-      },
-      "everyauth" : {
-        "facebook" : {
-          "appId" : "xxx",
-          "appSecret" : "xxx"
-        },
-        "github" : {
-          "appId" : "xxx",
-          "appSecret" : "xxx"
-        },
-        "twitter" : {
-          "consumerKey" : "xxx",
-          "consumerSecret" : "xxx"
-        }
-      }
-    }
 
 + Start your application server:
-
-    $ export NODE_ENV=production
-    $ node app.js
+    
+        $ export NODE_ENV=production
+        $ node app.js
 
 Test
 ----
