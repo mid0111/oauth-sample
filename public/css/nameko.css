@@ -1,0 +1,11 @@
+.navbar #btn-logon {
+    float: right;
+}
+
+.login {
+    float: right;
+}
+
+.login a {
+    padding: 1px;
+}

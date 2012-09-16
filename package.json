@@ -1,0 +1,15 @@
+{
+   "name": "oauth-sample"
+  ,"version": "0.0.1"
+  ,"private": true
+  ,"dependencies":{
+      "mongoose": "*"
+     ,"express": "*"
+     ,"everyauth": "*"
+     ,"config": "*"
+   }
+  ,"devDependencies": {
+      "mocha": "*"
+     ,"should": "*"
+   }
+}

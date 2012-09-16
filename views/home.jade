@@ -1,0 +1,44 @@
+- var title='Nameko'
+include header
+
+body
+- var name
+
+.container
+  .hero-unit
+    .top
+      h1 Nameko, World!
+      p Nameko is a super hero!
+      .login
+        - if (!everyauth.loggedIn)
+          | Log In With: 
+          a#btn_login_fb(href='/auth/facebook')
+            img.img-rounded(src='img/facebook_f.gif')
+          a#btn_login_git(href='/auth/twitter')
+            img.img-rounded(src='img/twitter-32x32.png')
+          a#btn_login_git(href='/auth/github')
+            img.img-rounded(src='img/github_32.png')
+        - else
+          - if (everyauth.facebook)
+            - name=JSON.stringify(everyauth.facebook.user.name)
+          - if (everyauth.twitter)
+            - name=JSON.stringify(everyauth.twitter.user.screen_name)
+          - if (everyauth.github)
+            - name=JSON.stringify(everyauth.github.user.login)
+          | #{name}
+.navbar.navbar-fixed-top
+  .navbar-inner
+    .container
+      a.brand(href='/')
+        | Nameko
+      ul.nav
+        li.first
+          a(href='/') Home
+        li
+          a(href='#') Link 2
+        li.last
+          a(href='#') Link 3
+      - if (everyauth.loggedIn)
+        a.btn.btn-primary#btn-logon(href='/logout')
+          | Log out
+
