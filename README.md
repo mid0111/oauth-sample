@@ -3,8 +3,8 @@ oauth-sample
 
 This is a sample project of oauth with [everyauth] (https://github.com/bnoguchi/everyauth).
 
-Install
--------
+Install dependencies
+--------------------
 
     $ npm install
 
